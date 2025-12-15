@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="subpage">
+
+<!-- HERO 이미지 -->
+<div class="travel-hero">
+  <img src="img_travel_top.jpeg" alt="TRAVEL 상단 이미지">
+</div>
+
+<!-- ===============================
+     NAV
+================================ -->
+<nav class="navbar navbar-expand-lg navbar-main fixed-top">
+  <div class="container-fluid nav-inner">
+    <a href="index.html" class="navbar-brand logo">바다와펜션</a>
+
+    <ul class="navbar-nav main-menu ms-auto">
+      <li class="nav-item menu-item" data-menu="about"><a class="nav-link" href="about.html">ABOUT</a></li>
+      <li class="nav-item menu-item" data-menu="rooms"><a class="nav-link" href="rooms.html">ROOMS</a></li>
+      <li class="nav-item menu-item" data-menu="special"><a class="nav-link" href="special.html">SPECIAL</a></li>
+      <li class="nav-item menu-item" data-menu="reserve"><a class="nav-link" href="reserve.html">RESERVE</a></li>
+      <li class="nav-item menu-item" data-menu="travel"><a class="nav-link active" href="travel.html">TRAVEL</a></li>
+      <li class="nav-item menu-item" data-menu="notice"><a class="nav-link" href="notice.html">NOTICE</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===============================
+     MEGA MENU
+================================ -->
+<div class="mega-box" id="megaBox">
+
+  <div class="mega-menu" id="menu-about">
+    <a href="about.html#exterior">외부풍경</a>
+    <a href="about.html#direction">오시는길</a>
+  </div>
+
+  <div class="mega-menu" id="menu-rooms">
+    <a href="rooms.html#floor1">1층</a>
+    <a href="rooms.html#floor2">2층</a>
+  </div>
+
+  <div class="mega-menu" id="menu-special">
+    <a href="special.html#farm">텃밭</a>
+    <a href="special.html#bbq">바베큐</a>
+  </div>
+
+  <div class="mega-menu" id="menu-reserve">
+    <a href="reserve.html#guide">예약안내</a>
+    <a href="reserve.html#realtime">실시간예약</a>
+  </div>
+
+  <div class="mega-menu" id="menu-travel">
+    <a href="travel.html#beach">해수욕장</a>
+    <a href="travel.html#bike">레일바이크</a>
+    <a href="travel.html#cave">환선굴</a>
+  </div>
+
+  <div class="mega-menu" id="menu-notice">
+    <a href="notice.html#notice">공지사항</a>
+    <a href="notice.html#faq">FAQ</a>
+  </div>
+
+</div>
+
+<!-- ===============================
+     TABS
+================================ -->
+<section class="sub-tabs">
+  <div class="tabs-inner">
+    <button class="subtab-btn active" data-target="beach">해수욕장</button>
+    <button class="subtab-btn" data-target="bike">레일바이크</button>
+    <button class="subtab-btn" data-target="cave">환선굴</button>
+  </div>
+</section>
+
+<!-- ===============================
+     해수욕장
+================================ -->
+<section id="beach" class="sub-section show">
+  <div class="travel-inner">
+    <h2 class="travel-title">해수욕장</h2>
+
+    <p class="travel-text">
+      일송펜션 인근의 아름다운 해수욕장은 맑은 바다와 고운 모래로 유명합니다.<br>
+      사계절 내내 산책하기 좋은 여행지입니다.
+    </p>
+
+    <div class="travel-media">
+      <div class="travel-photo">
+        <img src="img_beach.jpeg" alt="해수욕장">
+      </div>
+
+      <a href="https://map.naver.com/p/entry/place/13491902"
+         target="_blank"
+         class="travel-map">
+        <img src="img_beach_map.jpg" alt="해수욕장 지도">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     레일바이크
+================================ -->
+<section id="bike" class="sub-section">
+  <div class="travel-inner">
+    <h2 class="travel-title">레일바이크</h2>
+
+    <p class="travel-text">
+      탁 트인 바다 풍경을 따라 달리는 삼척 레일바이크.<br>
+      가족, 연인과 함께 즐기기 좋은 인기 여행 코스입니다.
+    </p>
+
+    <div class="travel-media">
+      <div class="travel-photo">
+        <img src="img_bike.png" alt="레일바이크">
+      </div>
+
+      <a href="https://map.naver.com/p/entry/place/13446671"
+         target="_blank"
+         class="travel-map">
+        <img src="img_bike_map.jpg" alt="레일바이크 지도">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     환선굴
+================================ -->
+<section id="cave" class="sub-section">
+  <div class="travel-inner">
+    <h2 class="travel-title">환선굴</h2>
+
+    <p class="travel-text">
+      국내 최대 규모의 석회암 동굴인 환선굴은<br>
+      천연기념물로 지정된 웅장한 자연 명소입니다.
+    </p>
+
+    <div class="travel-media">
+      <div class="travel-photo">
+        <img src="img_cave.jpeg" alt="환선굴">
+      </div>
+
+      <a href="https://map.naver.com/p/search/환선굴"
+         target="_blank"
+         class="travel-map">
+        <img src="img_cave_map.jpg" alt="환선굴 지도">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     SCRIPT
+================================ -->
+<script>
+/* ---------- 메가메뉴 hover ---------- */
+const items = document.querySelectorAll(".menu-item");
+const megaBox = document.getElementById("megaBox");
+const subMenus = document.querySelectorAll(".mega-menu");
+const navbar = document.querySelector(".navbar-main");
+
+items.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    const menuName = item.dataset.menu;
+    subMenus.forEach(m => m.style.display = "none");
+
+    const target = document.getElementById(`menu-${menuName}`);
+    if (target) {
+      megaBox.classList.add("show");
+      target.style.display = "flex";
+    }
+  });
+});
+
+let isHovering = false;
+
+navbar.addEventListener("mouseenter", () => isHovering = true);
+navbar.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+megaBox.addEventListener("mouseenter", () => isHovering = true);
+megaBox.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+/* ---------- 탭 + hash ---------- */
+const tabBtns = document.querySelectorAll(".subtab-btn");
+const sections = document.querySelectorAll(".sub-section");
+
+function activateTab(targetId) {
+  tabBtns.forEach(btn =>
+    btn.classList.toggle("active", btn.dataset.target === targetId)
+  );
+  sections.forEach(sec =>
+    sec.classList.toggle("show", sec.id === targetId)
+  );
+}
+
+tabBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    activateTab(btn.dataset.target);
+    history.replaceState(null, "", `#${btn.dataset.target}`);
+  });
+});
+
+window.addEventListener("load", () => {
+  const hash = location.hash.replace("#", "");
+  if (hash === "beach" || hash === "bike" || hash === "cave") {
+    activateTab(hash);
+  }
+});
+</script>
+
+</body>
+</html>

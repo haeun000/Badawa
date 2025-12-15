@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="subpage">
+
+<!-- HERO 이미지 -->
+<div class="notice-hero">
+  <img src="img_exterior01.jpeg" alt="공지사항 상단 이미지">
+</div>
+
+<!-- 네비게이션 -->
+<nav class="navbar navbar-expand-lg navbar-main fixed-top">
+  <div class="container-fluid nav-inner">
+    <a href="index.html" class="navbar-brand logo">바다와펜션</a>
+
+    <ul class="navbar-nav main-menu ms-auto">
+      <li class="nav-item menu-item" data-menu="about"><a class="nav-link" href="about.html">ABOUT</a></li>
+      <li class="nav-item menu-item" data-menu="rooms"><a class="nav-link" href="rooms.html">ROOMS</a></li>
+      <li class="nav-item menu-item" data-menu="special"><a class="nav-link" href="special.html">SPECIAL</a></li>
+      <li class="nav-item menu-item" data-menu="reserve"><a class="nav-link" href="reserve.html">RESERVE</a></li>
+      <li class="nav-item menu-item" data-menu="travel"><a class="nav-link" href="travel.html">TRAVEL</a></li>
+      <li class="nav-item menu-item" data-menu="notice"><a class="nav-link active" href="notice.html">NOTICE</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===============================
+     MEGA MENU
+================================ -->
+<div class="mega-box" id="megaBox">
+
+  <div class="mega-menu" id="menu-about">
+    <a href="about.html#exterior">외부풍경</a>
+    <a href="about.html#direction">오시는길</a>
+  </div>
+
+  <div class="mega-menu" id="menu-rooms">
+    <a href="rooms.html#floor1">1층</a>
+    <a href="rooms.html#floor2">2층</a>
+  </div>
+
+  <div class="mega-menu" id="menu-special">
+    <a href="special.html#farm">텃밭</a>
+    <a href="special.html#bbq">바베큐</a>
+  </div>
+
+  <div class="mega-menu" id="menu-reserve">
+    <a href="reserve.html#guide">예약안내</a>
+    <a href="reserve.html#realtime">실시간예약</a>
+  </div>
+
+  <div class="mega-menu" id="menu-travel">
+    <a href="travel.html#beach">해수욕장</a>
+    <a href="travel.html#bike">레일바이크</a>
+    <a href="travel.html#cave">환선굴</a>
+  </div>
+
+  <div class="mega-menu" id="menu-notice">
+    <a href="notice.html#notice">공지사항</a>
+    <a href="notice.html#faq">FAQ</a>
+  </div>
+
+</div>
+
+<!-- 탭 메뉴 -->
+<section class="sub-tabs">
+  <div class="tabs-inner">
+    <button class="subtab-btn active" data-target="notice">공지사항</button>
+    <button class="subtab-btn" data-target="faq">FAQ</button>
+  </div>
+</section>
+
+<!-- ===============================
+     공지사항
+================================ -->
+<section id="notice" class="sub-section show">
+  <div class="notice-inner">
+
+    <div class="notice-list-wrap">
+      <h2 class="notice-title">공지사항</h2>
+
+      <ul class="notice-list">
+        <li class="notice-item"
+            data-title="[공지] 성수기 예약 안내"
+            data-date="2025-06-01"
+            data-content="성수기 기간에는 예약이 조기 마감될 수 있으니 미리 예약 부탁드립니다.">
+          <span class="n-title">[공지] 성수기 예약 안내</span>
+          <span class="n-date">2025-06-01</span>
+        </li>
+
+        <li class="notice-item"
+            data-title="[공지] 바베큐 이용시간 변경"
+            data-date="2025-05-20"
+            data-content="바베큐 이용 시간은 오후 6시부터 10시까지로 변경되었습니다.">
+          <span class="n-title">[공지] 바베큐 이용시간 변경</span>
+          <span class="n-date">2025-05-20</span>
+        </li>
+
+        <li class="notice-item"
+            data-title="[안내] 입실/퇴실 시간 참고 바랍니다"
+            data-date="2025-04-18"
+            data-content="입실 시간은 오후 3시, 퇴실 시간은 오전 11시입니다.">
+          <span class="n-title">[안내] 입실/퇴실 시간 참고 바랍니다</span>
+          <span class="n-date">2025-04-18</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="notice-detail" style="display:none;">
+      <h2 class="detail-title"></h2>
+      <p class="detail-date"></p>
+      <div class="detail-content"></div>
+      <button class="detail-close">목록으로</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===============================
+     FAQ
+================================ -->
+<section id="faq" class="sub-section">
+  <div class="notice-inner">
+    <h2 class="notice-title">FAQ</h2>
+
+    <div class="faq-item">
+      <button class="faq-q">Q. 바베큐 이용 시간은 어떻게 되나요?</button>
+      <div class="faq-a">A. 바베큐 이용 시간은 오후 6시 ~ 10시이며, 숯/그릴 준비비는 2만원입니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Q. 픽업 서비스가 가능한가요?</button>
+      <div class="faq-a">A. 픽업 서비스는 제공되지 않습니다.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Q. 추가인원 비용이 궁금합니다.</button>
+      <div class="faq-a">A. 기준 인원 초과 시 1인당 2만원의 추가 요금이 발생합니다.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     SCRIPT
+================================ -->
+<script>
+/* ---------- 메가메뉴 hover ---------- */
+const items = document.querySelectorAll(".menu-item");
+const megaBox = document.getElementById("megaBox");
+const subMenus = document.querySelectorAll(".mega-menu");
+const navbar = document.querySelector(".navbar-main");
+
+items.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    const menuName = item.dataset.menu;
+    subMenus.forEach(m => m.style.display = "none");
+
+    const target = document.getElementById(`menu-${menuName}`);
+    if (target) {
+      megaBox.classList.add("show");
+      target.style.display = "flex";
+    }
+  });
+});
+
+let isHovering = false;
+
+navbar.addEventListener("mouseenter", () => isHovering = true);
+navbar.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+megaBox.addEventListener("mouseenter", () => isHovering = true);
+megaBox.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+/* ---------- 탭 + hash ---------- */
+const tabBtns = document.querySelectorAll(".subtab-btn");
+const sections = document.querySelectorAll(".sub-section");
+
+function activateTab(targetId) {
+  tabBtns.forEach(btn =>
+    btn.classList.toggle("active", btn.dataset.target === targetId)
+  );
+  sections.forEach(sec =>
+    sec.classList.toggle("show", sec.id === targetId)
+  );
+}
+
+tabBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    activateTab(btn.dataset.target);
+    history.replaceState(null, "", `#${btn.dataset.target}`);
+  });
+});
+
+window.addEventListener("load", () => {
+  const hash = location.hash.replace("#", "");
+  if (hash === "notice" || hash === "faq") {
+    activateTab(hash);
+  }
+});
+
+/* ---------- 공지 상세 ---------- */
+const noticeItems = document.querySelectorAll(".notice-item");
+const listWrap = document.querySelector(".notice-list-wrap");
+const detailBox = document.querySelector(".notice-detail");
+
+const detailTitle = document.querySelector(".detail-title");
+const detailDate = document.querySelector(".detail-date");
+const detailContent = document.querySelector(".detail-content");
+const closeBtn = document.querySelector(".detail-close");
+
+noticeItems.forEach(item => {
+  item.addEventListener("click", () => {
+    detailTitle.textContent = item.dataset.title;
+    detailDate.textContent = item.dataset.date;
+    detailContent.textContent = item.dataset.content;
+
+    listWrap.style.display = "none";
+    detailBox.style.display = "block";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  detailBox.style.display = "none";
+  listWrap.style.display = "block";
+});
+
+/* ---------- FAQ 아코디언 ---------- */
+const faqQuestions = document.querySelectorAll(".faq-q");
+faqQuestions.forEach(q => {
+  q.addEventListener("click", () => {
+    q.classList.toggle("open");
+    const answer = q.nextElementSibling;
+    answer.style.maxHeight = q.classList.contains("open")
+      ? answer.scrollHeight + "px"
+      : "0";
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="subpage">
+
+<!-- SPECIAL 상단 이미지 -->
+<div class="special-hero">
+  <img src="img03.jpeg" alt="Special 상단 이미지">
+</div>
+
+<!-- ===============================
+     NAV
+================================ -->
+<nav class="navbar navbar-expand-lg navbar-main fixed-top">
+  <div class="container-fluid nav-inner">
+    <a href="index.html" class="navbar-brand logo">바다와펜션</a>
+
+    <ul class="navbar-nav main-menu ms-auto">
+      <li class="nav-item menu-item" data-menu="about"><a class="nav-link" href="about.html">ABOUT</a></li>
+      <li class="nav-item menu-item" data-menu="rooms"><a class="nav-link" href="rooms.html">ROOMS</a></li>
+      <li class="nav-item menu-item" data-menu="special"><a class="nav-link active" href="special.html">SPECIAL</a></li>
+      <li class="nav-item menu-item" data-menu="reserve"><a class="nav-link" href="reserve.html">RESERVE</a></li>
+      <li class="nav-item menu-item" data-menu="travel"><a class="nav-link" href="travel.html">TRAVEL</a></li>
+      <li class="nav-item menu-item" data-menu="notice"><a class="nav-link" href="notice.html">NOTICE</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===============================
+     MEGA MENU
+================================ -->
+<div class="mega-box" id="megaBox">
+
+  <div class="mega-menu" id="menu-about">
+    <a href="about.html#exterior">외부풍경</a>
+    <a href="about.html#direction">오시는길</a>
+  </div>
+
+  <div class="mega-menu" id="menu-rooms">
+    <a href="rooms.html#floor1">1층</a>
+    <a href="rooms.html#floor2">2층</a>
+  </div>
+
+  <div class="mega-menu" id="menu-special">
+    <a href="special.html#farm">텃밭</a>
+    <a href="special.html#bbq">바베큐</a>
+  </div>
+
+  <div class="mega-menu" id="menu-reserve">
+    <a href="reserve.html#guide">예약안내</a>
+    <a href="reserve.html#realtime">실시간예약</a>
+  </div>
+
+  <div class="mega-menu" id="menu-travel">
+    <a href="travel.html#beach">해수욕장</a>
+    <a href="travel.html#bike">레일바이크</a>
+    <a href="travel.html#cave">환선굴</a>
+  </div>
+
+  <div class="mega-menu" id="menu-notice">
+    <a href="notice.html#notice">공지사항</a>
+    <a href="notice.html#faq">FAQ</a>
+  </div>
+
+</div>
+
+<!-- ===============================
+     TABS
+================================ -->
+<section class="sub-tabs">
+  <div class="tabs-inner">
+    <button class="subtab-btn active" data-target="farm">텃밭</button>
+    <button class="subtab-btn" data-target="bbq">바베큐</button>
+  </div>
+</section>
+
+<!-- ===============================
+     텃밭
+================================ -->
+<section id="farm" class="sub-section show">
+  <div class="sub-inner rooms-wrap">
+    <h2 class="sub-title">텃밭 <span>Farm Garden</span></h2>
+
+    <p class="sub-text">
+      바다와 펜션에서 직접 가꾼 작은 텃밭입니다.<br>
+      제철 채소를 직접 수확하고 자연 속에서 힐링할 수 있습니다.
+    </p>
+
+    <div class="room-photo">
+      <img src="img_farm.jpeg" alt="텃밭 사진">
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     바베큐
+================================ -->
+<section id="bbq" class="sub-section">
+  <div class="sub-inner rooms-wrap">
+    <h2 class="sub-title">바베큐 <span>BBQ Party</span></h2>
+
+    <p class="sub-text">
+      신선한 재료로 즐기는 야외 바베큐 파티!<br>
+      잔디밭에서 여유로운 식사를 즐길 수 있는 감성 공간입니다.
+    </p>
+
+    <div class="room-photo">
+      <img src="img_bbq.jpeg" alt="바베큐 사진">
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     SCRIPT
+================================ -->
+<script>
+/* ---------- 메가메뉴 hover ---------- */
+const items = document.querySelectorAll(".menu-item");
+const megaBox = document.getElementById("megaBox");
+const subMenus = document.querySelectorAll(".mega-menu");
+const navbar = document.querySelector(".navbar-main");
+
+items.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    const menuName = item.dataset.menu;
+    subMenus.forEach(m => m.style.display = "none");
+
+    const target = document.getElementById(`menu-${menuName}`);
+    if (target) {
+      megaBox.classList.add("show");
+      target.style.display = "flex";
+    }
+  });
+});
+
+let isHovering = false;
+
+navbar.addEventListener("mouseenter", () => isHovering = true);
+navbar.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+megaBox.addEventListener("mouseenter", () => isHovering = true);
+megaBox.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+/* ---------- 탭 + hash ---------- */
+const tabBtns = document.querySelectorAll(".subtab-btn");
+const sections = document.querySelectorAll(".sub-section");
+
+function activateTab(targetId) {
+  tabBtns.forEach(btn =>
+    btn.classList.toggle("active", btn.dataset.target === targetId)
+  );
+  sections.forEach(sec =>
+    sec.classList.toggle("show", sec.id === targetId)
+  );
+}
+
+tabBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    activateTab(btn.dataset.target);
+    history.replaceState(null, "", `#${btn.dataset.target}`);
+  });
+});
+
+window.addEventListener("load", () => {
+  const hash = location.hash.replace("#", "");
+  if (hash === "farm" || hash === "bbq") {
+    activateTab(hash);
+  }
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,743 @@
+/* 기본 폰트 */
+body {
+  margin: 0;
+  background: #f2f7ff; /* 💡 연한 하늘색 */
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Malgun Gothic", sans-serif;
+}
+
+
+/* ============================ */
+/* NAVBAR */
+/* ============================ */
+
+.navbar-main {
+  height: 100px;
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.45);
+  padding: 0;
+}
+
+.nav-inner {
+  padding: 0 60px;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.main-menu {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.main-menu .nav-link {
+  color: #ffffff;
+  font-size: 15px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* ============================ */
+/* MEGA BOX */
+/* ============================ */
+
+.mega-box {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  background: rgba(51,51,51,0.35);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(255,255,255,0.35);
+  display: none;
+  padding: 15px 0 25px;
+  z-index: 90;
+
+  text-align: center;
+}
+
+.mega-box.show {
+  display: block;
+}
+.mega-box {
+  pointer-events: auto;
+}
+
+
+.mega-menu {
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mega-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.mega-menu a:hover {
+  opacity: 0.7;
+}
+
+/* ============================ */
+/* HERO 슬라이드 */
+/* ============================ */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+}
+
+.hero-img.active {
+  opacity: 1;
+}
+
+.hero-text {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  color: #ffffff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* ============================ */
+/* 아래 소개 섹션 */
+/* ============================ */
+
+.home-content {
+  background: #dff3f8;
+  padding: 120px 20px;
+}
+
+.home-content .inner {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.home-content h2 {
+  font-size: 38px;
+  margin-bottom: 25px;
+  color: #2c3154;
+}
+
+.home-content p {
+  font-size: 17px;
+  color: #4c5a6e;
+  line-height: 1.7;
+}
+
+/* ------------------------------- */
+/* SECTION TWO (사진 2장 + 텍스트) */
+/* ------------------------------- */
+.section-two {
+  padding: 120px 0;
+  background: #f2f7ff;
+}
+
+.section-two .section-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+/* 왼쪽 텍스트 — 기존 그대로 유지 */
+.section-two .text-box {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-two .text-box h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #4d3a29;
+}
+
+.section-two .text-box p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #6b5a4e;
+}
+
+/* 오른쪽 사진 영역 — 가운데 정렬 + 오른쪽 위치 유지 */
+.section-two .photos {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end; /* 오른쪽 정렬 유지 */
+}
+
+/* 사진 1장만 쓸 때 두 장 크기만큼 크게 */
+.section-two .photo-item {
+  width: 520px;   /* 250px × 2 + 여백 감안한 크기 */
+  height: 330px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+
+/* ------------------------------- */
+/* FOOTER */
+/* ------------------------------- */
+.footer {
+  background: #5870db;
+  padding: 60px 0;
+  color: #ffffff;
+  margin-top: 80px;
+  border-radius: 60px 0 0 0;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-left h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.footer-right p {
+  margin: 4px 0;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+
+
+
+
+
+
+
+
+
+/*about*/
+/* 서브 페이지 상단 이미지 */
+/* ============= subpage 기본 배경 =============== */
+body.subpage {
+  background: #ccddfa;
+}
+
+/* 탭바 */
+.sub-tabs {
+  margin-top: 100px;
+  border-bottom: 1px solid #f2f7ff;
+  background: #f2f7ff;
+}
+.tabs-inner {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 15px 0;
+}
+.subtab-btn {
+  background: none;
+  border: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: #230cb7;
+  padding-bottom: 6px;
+}
+.subtab-btn.active {
+  border-bottom: 2px solid #6c5f52;
+}
+
+/* 섹션 공통 */
+.sub-section {
+  display: none;
+  padding: 80px 0;
+}
+.sub-section.show {
+  display: block;
+}
+.sub-inner {
+  width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+.sub-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #230cb7;
+}
+.sub-title span {
+  font-size: 22px;
+  color: #000000;
+  margin-left: 8px;
+}
+.sub-text {
+  margin-top: 18px;
+  color: #554c46;
+  line-height: 1.7;
+}
+
+/* 사진 */
+.about-photo-box {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.about-photo {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+/* 외부풍경(sub-photo) → about-photo와 동일한 스타일 적용 */
+.sub-photo img {
+  width: 80%;
+  max-width: 700px;
+  border-radius: 14px;
+  margin-top: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  cursor: pointer;
+  object-fit: cover;
+}
+
+/* 중앙 정렬 보장 */
+.sub-photo {
+  text-align: center;
+}
+
+
+
+
+/* ============ ABOUT SUBPAGE HERO ============ */
+/* ============ ABOUT SUBPAGE HERO ============ */
+.about-hero {
+  position: absolute;     /* 🔥 네비 뒤로 보이도록 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;          /* 원하는 크기로 */
+  z-index: -1;            /* 🔥 네비게이션 뒤로 배치 */
+  overflow: hidden;
+}
+
+.about-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 탭바는 사진 바로 아래 */
+.sub-tabs {
+  margin-top: 550px;   /* 🔥 사진 높이만큼 아래로 밀기 */
+  border-bottom: 1px solid #d8cfc8;
+  background: #f8f3ee;
+}
+
+
+
+
+
+
+
+
+
+/*2.ROOMS*/
+/* ========================== */
+/* ROOMS HERO IMAGE */
+/* ========================== */
+.rooms-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;    /* 크기 조절 가능 */
+  z-index: -1;
+  overflow: hidden;
+}
+
+.rooms-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* rooms 탭바는 바로 붙음 */
+.sub-tabs {
+  margin-top: 550px;
+}
+
+/* 객실 사진 */
+.room-photo img {
+  width: 80%;
+  border-radius: 14px;
+  margin-top: 40px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+
+
+
+/*3.special*/
+/* =============================== */
+/* SPECIAL HERO IMAGE */
+/* =============================== */
+.special-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.special-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 탭바 여백 조정 */
+.sub-tabs {
+  margin-top: 550px;
+}
+
+
+
+/*4.RESERVE*/
+/* ===== RESERVE HERO ===== */
+.reserve-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;      
+  overflow: hidden;
+  z-index: -1;       
+}
+
+.reserve-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center;
+}
+
+.sub-tabs {
+  margin-top: 550px !important; 
+}
+
+
+/* 예약안내 텍스트 영역 */
+.reserve-inner {
+  width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #000000;
+}
+
+.reserve-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: left;
+  color: #230cb7;
+}
+
+.reserve-text {
+  white-space: pre-line;
+}
+
+.reserve-text.center {
+  text-align: center;
+}
+
+/* 실시간예약 버튼 */
+.reserve-link-box {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.reserve-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #230cb7;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.reserve-btn:hover {
+  opacity: 0.85;
+}
+
+
+
+
+
+/*5.travel*/
+/* ===== TRAVEL HERO ===== */
+.travel-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;      
+  overflow: hidden;
+  z-index: -1;       
+}
+
+.travel-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center;
+}
+
+.sub-tabs {
+  margin-top: 550px !important; 
+}
+
+
+/* ===== TRAVEL 공통 ===== */
+.travel-inner {
+  width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.travel-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #230cb7;
+  margin-bottom: 25px;
+}
+
+.travel-text {
+  color: #4a443e;
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.travel-photo img {
+  width: 80%;
+  border-radius: 12px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+
+
+
+
+
+.travel-media {
+  display: block;      /* flex 말고 block으로 먼저 */
+  text-align: center;
+}
+
+/* 사진과 지도 사이 여백 */
+.travel-photo {
+  margin-bottom: 40px;   /* ← 이건 무조건 적용됨 */
+}
+
+/* 이미지 공통 효과 */
+.travel-photo img,
+.travel-map img {
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+/* 지도 이미지 */
+.travel-map img {
+  width: 460px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*6.notice*/
+/* ===== NOTICE HERO ===== */
+.notice-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;      
+  overflow: hidden;
+  z-index: -1;       
+}
+
+.notice-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  
+  object-position: center;
+}
+
+.sub-tabs {
+  margin-top: 550px !important; 
+}
+
+
+/* ===== 공지사항 ===== */
+.notice-inner {
+  width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.notice-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #230cb7;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.notice-list {
+  list-style: none;
+  padding: 0;
+}
+
+.notice-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 17px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.notice-list li:hover {
+  transform: scale(1.015);
+}
+
+
+.n-title { color: #4a443e; }
+.n-date { color: #7a7774; }
+
+/* 상세 */
+.notice-detail {
+  text-align: left;
+}
+
+.detail-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.detail-date {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.detail-content {
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.detail-close {
+  margin-top: 40px;
+  padding: 10px 24px;
+  border: none;
+  background: #230cb7;
+  color: #fff;
+  border-radius: 6px;
+}
+
+
+/* ===== FAQ ===== */
+.faq-inner {
+  width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-q {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 14px 0;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  color: #333;
+}
+
+.faq-a {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.7;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+  padding-left: 5px;
+}
+
+
+
+
+
+
+
+

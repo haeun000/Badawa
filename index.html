@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ===============================
+     상단 네비게이션
+================================ -->
+<nav class="navbar navbar-expand-lg navbar-main fixed-top">
+  <div class="container-fluid nav-inner">
+
+    <!-- 로고 -->
+    <a href="index.html" class="navbar-brand logo">바다와펜션</a>
+
+    <!-- 메인 메뉴 -->
+    <ul class="navbar-nav main-menu ms-auto">
+      <li class="nav-item menu-item" data-menu="about">
+        <a class="nav-link" href="about.html">ABOUT</a>
+      </li>
+      <li class="nav-item menu-item" data-menu="rooms">
+        <a class="nav-link" href="rooms.html">ROOMS</a>
+      </li>
+      <li class="nav-item menu-item" data-menu="special">
+        <a class="nav-link" href="special.html">SPECIAL</a>
+      </li>
+      <li class="nav-item menu-item" data-menu="reserve">
+        <a class="nav-link" href="reserve.html">RESERVE</a>
+      </li>
+      <li class="nav-item menu-item" data-menu="travel">
+        <a class="nav-link" href="travel.html">TRAVEL</a>
+      </li>
+      <li class="nav-item menu-item" data-menu="notice">
+        <a class="nav-link" href="notice.html">NOTICE</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ===============================
+       MEGA MENU
+  ================================ -->
+  <div class="mega-box" id="megaBox">
+
+    <!-- ABOUT -->
+    <div class="mega-menu" id="menu-about">
+      <a href="about.html#exterior">외부풍경</a>
+<a href="about.html#direction">오시는길</a>
+
+    </div>
+
+    <!-- ABOUT -->
+<div class="mega-menu" id="menu-about">
+  <a href="about.html#outdoor">외부풍경</a>
+  <a href="about.html#way">오시는길</a>
+</div>
+
+<!-- ROOMS -->
+<div class="mega-menu" id="menu-rooms">
+  <a href="rooms.html#floor1">1층</a>
+  <a href="rooms.html#floor2">2층</a>
+</div>
+
+<!-- SPECIAL -->
+<div class="mega-menu" id="menu-special">
+  <a href="special.html#farm">텃밭</a>
+  <a href="special.html#bbq">바베큐</a>
+</div>
+
+<!-- RESERVE -->
+<div class="mega-menu" id="menu-reserve">
+  <a href="reserve.html#guide">예약안내</a>
+  <a href="reserve.html#realtime">실시간예약</a>
+</div>
+
+
+<!-- TRAVEL -->
+<div class="mega-menu" id="menu-travel">
+  <a href="travel.html#beach">해수욕장</a>
+  <a href="travel.html#bike">레일바이크</a>
+  <a href="travel.html#cave">환선굴</a>
+</div>
+
+<!-- NOTICE -->
+<div class="mega-menu" id="menu-notice">
+  <a href="notice.html#notice">공지사항</a>
+  <a href="notice.html#faq">FAQ</a>
+</div>
+
+
+  </div>
+</nav>
+
+<!-- ===============================
+     HERO SLIDER
+================================ -->
+<header class="hero">
+  <div class="hero-slider">
+    <img src="img01.JPG" class="hero-img active">
+    <img src="img02.JPG" class="hero-img">
+    <img src="img_travel_top.jpeg" class="hero-img">
+  </div>
+
+  <div class="hero-text">
+    <h1>바다와 가장 가까운 쉼</h1>
+    <p>바다와펜션 · 힐링 스테이</p>
+  </div>
+</header>
+
+<!-- ===============================
+     CONTENT
+================================ -->
+<section class="home-content">
+  <div class="inner">
+    <h2>오직 당신만을 위한 Private Stay</h2>
+    <p>
+      삼척 바다와 펜션에 오신 것을 환영합니다.<br>
+      프라이빗한 공간에서 편안함과 힐링을 경험하세요.
+    </p>
+  </div>
+</section>
+
+<section class="section-two">
+  <div class="section-inner">
+    <div class="text-box">
+      <h2>프라이빗 감성 공간</h2>
+      <p>
+        바다와 펜션은 편안함을 최우선으로 생각합니다.<br>
+        아늑한 실내와 조용한 주변 환경에서<br>
+        온전한 휴식을 경험해보세요.<br><br>
+        지도 사진을 클릭하면<br>
+        네이버지도로 이동합니다.
+      </p>
+    </div>
+
+    <div class="photos">
+      <a href="https://map.naver.com/p/search/%EC%9D%BC%EC%86%A1%EB%AF%BC%EB%B0%95/place/15116883"
+         target="_blank">
+        <img src="img04.jpg" class="photo-item">
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     FOOTER
+================================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <h3>바다와펜션</h3>
+      <p>삼척 바다와 펜션</p>
+    </div>
+
+    <div class="footer-right">
+      <p>📞 033-572-3325</p>
+      <p>주소: 강원특별자치도 삼척시 근덕면 덕산길 25</p>
+      <p>대표자: 임우남</p>
+      <p>COPYRIGHT© 바다와펜션. ALL RIGHTS RESERVED.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ===============================
+     SCRIPT
+================================ -->
+<script>
+  const items = document.querySelectorAll(".menu-item");
+  const megaBox = document.getElementById("megaBox");
+  const subMenus = document.querySelectorAll(".mega-menu");
+  const navbar = document.querySelector(".navbar-main");
+
+  items.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      const menuName = item.dataset.menu;
+      subMenus.forEach(m => m.style.display = "none");
+
+      const target = document.querySelector(`#menu-${menuName}`);
+      if (target) {
+        megaBox.classList.add("show");
+        target.style.display = "flex";
+      }
+    });
+  });
+
+  let isHovering = false;
+
+  navbar.addEventListener("mouseenter", () => isHovering = true);
+  navbar.addEventListener("mouseleave", () => {
+    isHovering = false;
+    setTimeout(() => {
+      if (!isHovering) megaBox.classList.remove("show");
+    }, 150);
+  });
+
+  megaBox.addEventListener("mouseenter", () => isHovering = true);
+  megaBox.addEventListener("mouseleave", () => {
+    isHovering = false;
+    setTimeout(() => {
+      if (!isHovering) megaBox.classList.remove("show");
+    }, 150);
+  });
+
+  // hero 슬라이드
+  const slides = document.querySelectorAll(".hero-img");
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+  }, 3500);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="subpage">
+
+<!-- HERO 이미지 -->
+<div class="reserve-hero">
+  <img src="img_reserve_top.jpeg" alt="예약안내 상단 이미지">
+</div>
+
+<!-- ===============================
+     NAV
+================================ -->
+<nav class="navbar navbar-expand-lg navbar-main fixed-top">
+  <div class="container-fluid nav-inner">
+    <a href="index.html" class="navbar-brand logo">바다와펜션</a>
+
+    <ul class="navbar-nav main-menu ms-auto">
+      <li class="nav-item menu-item" data-menu="about"><a class="nav-link" href="about.html">ABOUT</a></li>
+      <li class="nav-item menu-item" data-menu="rooms"><a class="nav-link" href="rooms.html">ROOMS</a></li>
+      <li class="nav-item menu-item" data-menu="special"><a class="nav-link" href="special.html">SPECIAL</a></li>
+      <li class="nav-item menu-item" data-menu="reserve"><a class="nav-link active" href="reserve.html">RESERVE</a></li>
+      <li class="nav-item menu-item" data-menu="travel"><a class="nav-link" href="travel.html">TRAVEL</a></li>
+      <li class="nav-item menu-item" data-menu="notice"><a class="nav-link" href="notice.html">NOTICE</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===============================
+     MEGA MENU
+================================ -->
+<div class="mega-box" id="megaBox">
+
+  <div class="mega-menu" id="menu-about">
+    <a href="about.html#exterior">외부풍경</a>
+    <a href="about.html#direction">오시는길</a>
+  </div>
+
+  <div class="mega-menu" id="menu-rooms">
+    <a href="rooms.html#floor1">1층</a>
+    <a href="rooms.html#floor2">2층</a>
+  </div>
+
+  <div class="mega-menu" id="menu-special">
+    <a href="special.html#farm">텃밭</a>
+    <a href="special.html#bbq">바베큐</a>
+  </div>
+
+  <div class="mega-menu" id="menu-reserve">
+    <a href="reserve.html#guide">예약안내</a>
+    <a href="reserve.html#realtime">실시간예약</a>
+  </div>
+
+  <div class="mega-menu" id="menu-travel">
+    <a href="travel.html#beach">해수욕장</a>
+    <a href="travel.html#bike">레일바이크</a>
+    <a href="travel.html#cave">환선굴</a>
+  </div>
+
+  <div class="mega-menu" id="menu-notice">
+    <a href="notice.html#notice">공지사항</a>
+    <a href="notice.html#faq">FAQ</a>
+  </div>
+
+</div>
+
+<!-- ===============================
+     TABS
+================================ -->
+<section class="sub-tabs">
+  <div class="tabs-inner">
+    <button class="subtab-btn active" data-target="guide">예약안내</button>
+    <button class="subtab-btn" data-target="realtime">실시간예약</button>
+  </div>
+</section>
+
+<!-- 예약안내 -->
+<section id="guide" class="sub-section show">
+  <div class="reserve-inner">
+    <h2 class="reserve-title">예약안내</h2>
+
+    <p class="reserve-text">
+      <strong>주소:</strong> 강원특별자치도 삼척시 근덕면 덕산길 25<br><br>
+
+      <strong>인원 추가 요금</strong><br>
+      • 성인: 20,000원<br>
+      • 24개월 미만 무료<br><br>
+
+      <strong>입실 15시 / 퇴실 11시</strong><br><br>
+
+      <strong>개별 바베큐</strong><br>
+      • 숯+그릴: 2만원<br>
+      • 이용시간: ~ 오후 10시
+    </p>
+  </div>
+</section>
+
+<!-- 실시간 예약 -->
+<section id="realtime" class="sub-section">
+  <div class="reserve-inner">
+    <h2 class="reserve-title">실시간예약</h2>
+
+    <div class="reserve-link-box">
+      <a href="https://map.naver.com/p/search/%EC%9D%BC%EC%86%A1%EB%AF%BC%EB%B0%95/place/15116883"
+         class="reserve-btn"
+         target="_blank">
+        ▶ 네이버 실시간예약 바로가기
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===============================
+     SCRIPT
+================================ -->
+<script>
+/* ---------- 메가메뉴 hover ---------- */
+const items = document.querySelectorAll(".menu-item");
+const megaBox = document.getElementById("megaBox");
+const subMenus = document.querySelectorAll(".mega-menu");
+const navbar = document.querySelector(".navbar-main");
+
+items.forEach(item => {
+  item.addEventListener("mouseenter", () => {
+    const menuName = item.dataset.menu;
+    subMenus.forEach(m => m.style.display = "none");
+
+    const target = document.getElementById(`menu-${menuName}`);
+    if (target) {
+      megaBox.classList.add("show");
+      target.style.display = "flex";
+    }
+  });
+});
+
+let isHovering = false;
+
+navbar.addEventListener("mouseenter", () => isHovering = true);
+navbar.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+megaBox.addEventListener("mouseenter", () => isHovering = true);
+megaBox.addEventListener("mouseleave", () => {
+  isHovering = false;
+  setTimeout(() => {
+    if (!isHovering) megaBox.classList.remove("show");
+  }, 150);
+});
+
+/* ---------- 탭 + hash ---------- */
+const tabBtns = document.querySelectorAll(".subtab-btn");
+const sections = document.querySelectorAll(".sub-section");
+
+function activateTab(targetId) {
+  tabBtns.forEach(btn =>
+    btn.classList.toggle("active", btn.dataset.target === targetId)
+  );
+  sections.forEach(sec =>
+    sec.classList.toggle("show", sec.id === targetId)
+  );
+}
+
+tabBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    activateTab(btn.dataset.target);
+    history.replaceState(null, "", `#${btn.dataset.target}`);
+  });
+});
+
+window.addEventListener("load", () => {
+  const hash = location.hash.replace("#", "");
+  if (hash === "guide" || hash === "realtime") {
+    activateTab(hash);
+  }
+});
+</script>
+
+</body>
+</html>
